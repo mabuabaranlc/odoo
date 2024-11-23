@@ -1,7 +1,8 @@
 version: '2'
 services:
   db:
-    image: postgres:17
+    image: postgis/postgis:17-master
+    container_name: odoo-db
     user: root
     environment:
       - POSTGRES_USER=odoo
@@ -13,6 +14,7 @@ services:
 
   odoo18:
     image: odoo:18
+    container_name: odoo-web
     user: root
     depends_on:
       - db
