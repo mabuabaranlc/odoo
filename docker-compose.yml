@@ -13,7 +13,7 @@ services:
         - ./postgresql:/var/lib/postgresql/data
 
   odoo18:
-    image: odoo:18
+    image: odoo:15
     container_name: odoo-web
     user: root
     depends_on:
